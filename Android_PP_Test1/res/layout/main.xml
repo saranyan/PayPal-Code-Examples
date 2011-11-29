@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/RelativeLayout01" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+	<Gallery xmlns:android="http://schemas.android.com/apk/res/android" 
+	    android:id="@+id/gallery"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	/>
+	
+	<ImageView android:id="@+id/ImageView01"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/gallery"
+		/>
+	<TextView android:id="@+id/TextView01"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/ImageView01"
+		/>
+	
+</RelativeLayout>

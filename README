@@ -1,0 +1,11 @@
+This is a repository containing code examples to building PayPal mobile apps.
+Browse to individual folders for more information.
+
+A brief index -
+
+Folder Name              Description
+
+Android_PP_Test1         Simple introduction to MPL library. Android app
+			 demonstrates an art gallery with Picasso paintings
+			 that can be purchased through PayPal.
+
