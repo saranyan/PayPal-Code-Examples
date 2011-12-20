@@ -1,0 +1,15 @@
+<h1>PayPal IPN Notification example in Rails </h1>
+<p>Check the code on github at </p>
+<p>Check the blog post at </p>
+<% payment_service_for @item_number, PAYPAL_ACCOUNT, :amount => @amount, :currency => @currency, :service => :paypal do |service|
+	service.customer :first_name => @user.first_name, :last_name => @user.last_name, :phone => @user.phone, :email => @user.email
+	service.billing_address :city => @user.city, :address1 => @user.address1, :state => @user.state, :country => @user.country, :zip => @user.zip
+	service.item_name "Testing IPN"
+	service.invoice @invoice
+	service.tax "0.00"
+	
+	#service.notify_url url_for(:only_path => false,:controller => 'pay_pal', :action => 'notify')
+	service.return_url url_for(:only_path => false, :controller => 'pay_pal',:action => 'show')
+	service.cancel_return_url url_for(:only_path => false, :controller => 'pay_pal', :action => 'cancel') %>
+	<%= submit_tag 'Make Payment'%>
+	<% end %>

@@ -1,0 +1,3 @@
+== Simple example demonstrating PayPal IPN functionality with Rails 31
+= Uses active_merchant plugin
+= refer to this blog post for how this works
